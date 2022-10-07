@@ -8,36 +8,45 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <title>Paw Finder</title>
 </head>
+
 <body>
-  <header class="hero is-primary title is-size-1 has-text-centered">Paw Finder</header>
+  <header class="hero is-primary has-text-centered">
+    <h1 class="title is-size-1 m-5">Paw Finder</h1>
+  </header>
 
   <div class="container has-text-centered">
     <h1 class="title is-2">Welcome to Tinder meets dogs, click the start button to find your dog!</h1>
-    <button class="js-modal-trigger button is-primary" data-target="modal-js-example">Start</button>
+    <!--Modal Button-->
+    <button class="js-modal-trigger button is-primary" data-target="search-modal">Start</button>
+  </div>
+  
+  <!--Modal Element-->
+  <div class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Enter your zipcode</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <input type="text" class="input is-primary">
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="searchBtn">Search</button>
+        <button class="button" id="cancelBtn">Cancel</button>
+      </footer>
+    </div>
   </div>
 
-    <div class="modal" id="modal-js-example">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">Enter your zipcode</p>
-          <button class="delete" aria-label="close"></button>
-        </header>
-        <input type="text" class="input is-primary">
-        <footer class="modal-card-foot">
-          <button class="button is-success" id="searchBtn">Search</button>
-          <button class="button" id="cancelBtn">Cancel</button>
-        </footer>
-      </div>
-    </div>
-
+  <div class="has-text-centered m-5">
+    <img id="dog-image" src="./assets/images/shiba-inu.JPG" alt="Shiba Inu">
+    <h2>Dog type: Shiba Inu</h2>
   </div>
   
   <!--CDN link for jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!--Example starter code for modal use, to be removed-->
-  <script>document.addEventListener('DOMContentLoaded', () => {
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
       $el.classList.add('is-active');
