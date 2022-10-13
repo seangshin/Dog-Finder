@@ -19,6 +19,28 @@
     <!--Modal Button-->
     <button class="js-modal-trigger button is-primary" data-target="search-modal">Start</button>
   </div>
+
+  <!---------------------------->
+  <div class="container has-text-centered m-5">
+    <div id="randomDogPic">
+      <img class="m-5" src="./assets/images/shiba-inu.JPG">
+    </div>
+
+    <h2 id="breed">Breed: Shiba Inu</h2>
+      <!-- buttons -->
+      <br>
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column is-full">
+          <div class="buttons are-medium is-centered">
+              <button class="button is-primary is-light" id="generate"> Generate Random Dog </button>
+              <button class="button is-link is-light" id="dog-APIninja"> Show Dog Attributes  </button>
+            </div>
+        </div>
+        <div class="column"></div>
+      </div>
+  </div>
+  <!---------------------------->
   
   <!--Modal Element-->
   <div class="modal" id="search-modal">
@@ -35,24 +57,6 @@
       </footer>
     </div>
   </div>
-
-  <div class="has-text-centered m-5">
-    <img id="dog-image" src="./assets/images/shiba-inu.JPG" alt="Shiba Inu">
-    <h2>Dog type: Shiba Inu</h2>
-  </div>
-
-  <!-- buttons -->
-<br>
-<div class="columns">
-  <div class="column"></div>
-  <div class="column is-full">
-    <div class="buttons are-medium is-centered">
-        <button class="button is-primary is-light"> Not for Me </button>
-        <button class="button is-link is-light"> Pups available  </button>
-      </div>
-  </div>
-  <div class="column"></div>
-</div>
 
 <!-- Progress Bars -->
   <!-- Need to find a way to enter data from API into Attribute and value section and manipulate color based on the value -->
@@ -116,9 +120,6 @@
       }
     });
   });</script>
-
-  
-
 
   <script src="./assets/js/script.js"></script>
 </body>
