@@ -18,7 +18,90 @@
     <h1 class="title is-2">Welcome to Tinder meets dogs, click the start button to find your dog!</h1>
     <!--Modal Button-->
     <button class="js-modal-trigger button is-primary" data-target="search-modal">Start</button>
+      </div>
+
+  <!--Modal Element--> 
+  <div class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <h2 class="modal-card-title">Please select the criteria that is important to you!  </h2>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body white-bis">
+        <div>
+          <input type="checkbox" class="checkbox" value="children" id="goodwithchildren">
+          <label for="children"> Good with children</label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="otherdogs" id="goodwithotherdogs">
+          <label for="otherdogs"> Good with other dogs </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="hair" id="shedding">
+          <label for="hair"> Shedding </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="maintenance" id="grooming">
+          <label for="maintenance"> Grooming </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="slobber" id="drooling">
+          <label for="slobber"> Drooling </label>
+        </div> 
+        <div>
+          <input type="checkbox" class="checkbox" value="fur" id="coatlength">
+          <label for="fur"> Coat Length </label>
+        </div>
+        <div>
+          <input type="checkbox" class="strangers" value="fur" id="goodwithstrangers">
+          <label for="strangers"> Good with Strangers </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="spirited" id="playfulness">
+          <label for="spirited"> Playfulness </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="defense" id="protectiveness">
+          <label for="defense"> Protectiveness  </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="adaptable" id="trainability">
+          <label for="adaptable"> Trainability </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="passion" id="energy">
+          <label for="passion"> Energy </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value="woof" id="barking">
+          <label for="woof"> Barking </label>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="searchBtn">Find My Soul Dog!</button>
+        <button class="button" id="cancelBtn">Cancel</button>
+      </footer>
+    </div>
   </div>
+    
+    <div class="modal" id="search-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Modal title</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <!-- Content ... -->
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Save changes</button>
+          <button class="button">Cancel</button>
+        </footer>
+      </div>
+    </div>
+
 
   <!---------------------------->
   <div class="container has-text-centered m-5">
@@ -42,21 +125,7 @@
   </div>
   <!---------------------------->
   
-  <!--Modal Element-->
-  <div class="modal" id="search-modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Enter your zipcode</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <input type="text" class="input is-primary">
-      <footer class="modal-card-foot">
-        <button class="button is-success" id="searchBtn">Search</button>
-        <button class="button" id="cancelBtn">Cancel</button>
-      </footer>
-    </div>
-  </div>
+ 
 
 <!-- Progress Bars -->
   <!-- Need to find a way to enter data from API into Attribute and value section and manipulate color based on the value -->
