@@ -2,6 +2,7 @@ var generateBtn = $("#generate");
 var randomDogPicEl = $("#randomDogPic");
 var breedEl = $("#breed");
 var dogBtn = $("#dog-APIninja");
+var dogAttrEl = $("#dog-attributes");
 
 var globalBreed = "";
 
@@ -15,7 +16,7 @@ function randomDogImage(dogAPIfetch) {
   randomDogPicEl.text("");//clear element hook
   var imgEl = $("<img>");
   imgEl.addClass("m-5");
-  imgEl.attr("id", "dog-image").attr("src", dogAPIfetch.message);
+  imgEl.attr("value", "dog-image").attr("src", dogAPIfetch.message);
   randomDogPicEl.append(imgEl);
 
   //extracts the breed string in the return message
@@ -28,6 +29,31 @@ function randomDogImage(dogAPIfetch) {
 
   //temporary
   globalBreed = breed;
+}
+
+function addDogAttributes(myDog) {
+    var barking = myDog[0].barking;
+    console.log(barking);
+
+    var divEl = $("<div>");
+    divEl.addClass("box");
+    dogAttrEl.append(divEl);
+    var pEl = $("<p>");
+    pEl.addClass("has-text-weight-bold");
+    pEl.text("Barking");
+    dogAttrEl.append(pEl);
+    var progressEl = $("<progress>");
+    progressEl.addClass("progress is-large");
+    if(barking==1 || barking==2) {
+        progressEl.addClass("is-danger");
+    } else if (barking == 3) {
+        progressEl.addClass("is-warning");
+    } else if (barking == 4 || barking == 5) {
+        progressEl.addClass("is-success");
+    }
+    progressEl.attr("value", barking);
+    progressEl.attr("max", 5);
+    dogAttrEl.append(progressEl);
 }
 //Function to handle the Generate Rnadom Dog event which runs a fetch on the Dog API.
 //This function output will call the randomDogImage function
@@ -56,7 +82,7 @@ function adoptadogButtonHandler() {
       response.json().then(function(data) {
       //fetch data now available (add functions)
         console.log(data);//debug to show fetch return
-        //randomDogImage(data);
+        addDogAttributes(data);
       })
     } else {
       alert("Error. Failed to fetch response.");
