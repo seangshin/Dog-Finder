@@ -65,52 +65,52 @@
       </header>
       <section class="modal-card-body white-bis">
         <div>
-          <input type="checkbox" class="checkbox" value0="false" index ="0" id="goodwithchildren">
-          <label for="children"> Good with children</label>
+          <input type="checkbox" class="checkbox" value0="false" index="0">
+          <label for="woof" id="0"> Barking </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value1="false" index ="1" id="goodwithotherdogs">
-          <label for="otherdogs"> Good with other dogs </label>
+          <input type="checkbox" class="checkbox" value1="false" index="1">
+          <label for="fur" id="1"> Coat Length </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value2="false" index ="2" id="shedding">
-          <label for="hair"> Shedding </label>
-        </div>
-        <div>
-          <input type="checkbox" class="checkbox" value3="false" index ="3" id="grooming">
-          <label for="maintenance"> Grooming </label>
-        </div>
-        <div>
-          <input type="checkbox" class="checkbox" value4="false" index ="4" id="drooling">
-          <label for="slobber"> Drooling </label>
+          <input type="checkbox" class="checkbox" value2="false" index="2">
+          <label for="slobber" id="2"> Drooling </label>
         </div> 
         <div>
-          <input type="checkbox" class="checkbox" value5="false" index ="5" id="coatlength">
-          <label for="fur"> Coat Length </label>
+          <input type="checkbox" class="checkbox" value3="false" index="3">
+          <label for="passion" id="3"> Energy </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value6="false" index ="6" id="goodwithstrangers">
-          <label for="strangers"> Good with Strangers </label>
+          <input type="checkbox" class="checkbox" value4="false" index="4">
+          <label for="children" id="4"> Good with children</label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value7="false" index ="7" id="playfulness">
-          <label for="spirited"> Playfulness </label>
+          <input type="checkbox" class="checkbox" value5="false" index="5">
+          <label for="otherdogs" id="5"> Good with other dogs </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value8="false" index ="8" id="protectiveness">
-          <label for="defense"> Protectiveness  </label>
+          <input type="checkbox" class="checkbox" value6="false" index="6">
+          <label for="strangers" id="6"> Good with Strangers </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value9="false" index ="9" id="trainability">
-          <label for="adaptable"> Trainability </label>
+          <input type="checkbox" class="checkbox" value7="false" index="7">
+          <label for="maintenance" id="7"> Grooming </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value10="false" index ="10" id="energy">
-          <label for="passion"> Energy </label>
+          <input type="checkbox" class="checkbox" value8="false" index="8">
+          <label for="spirited" id="8"> Playfulness </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value11="false" index ="11" id="barking">
-          <label for="woof"> Barking </label>
+          <input type="checkbox" class="checkbox" value9="false" index="9">
+          <label for="defense" id="9"> Protectiveness  </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value10="false" index="10">
+          <label for="hair" id="10"> Shedding </label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkbox" value11="false" index="11">
+          <label for="adaptable" id="11"> Trainability </label>
         </div>
       </section>
       <footer class="modal-card-foot">
@@ -127,47 +127,51 @@
         <!--Hook for dog picture and breed-->
         <div id="randomDogPic"></div>
         <div id="breedDiv"></div>
+
+        <div id="buttons">
+          <div class="columns">
+            <div class="column is-full">
+              <div class="buttons are-medium is-centered">
+                  <button class="button is-primary is-light" id="nextBtn"> Next </button>
+                  <button class="button is-link is-light" id="saveBtn"> Save  </button>
+                </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div> 
   </div>
-    
-      <!--
-      <br>
-      <div class="columns">
-        <div class="column"></div>
-        <div class="column is-full">
-          <div class="buttons are-medium is-centered">
-              <button class="button is-primary is-light" id="generate"> Generate Random Dog </button>
-              <button class="button is-link is-light" id="dog-APIninja"> Show Dog Attributes  </button>
-            </div>
-        </div>
-        <div class="column"></div>
-      </div>
-  </div>
-  -->
-  
+      
   <!-- Progress Bars -->
   <div class="columns is-centered">
-    <div class="column is-one-fifth">
+    <div class="column is-one-third">
       <section class="section" id="dog-attributes">
-        <!--temporary
+        <!-- 
         <div class="box">
-          <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large is-success" value="5" max="5"></progress>
+          
+          <div>
+            <p class="has-text-weight-bold">Attribute</p> 
+            <progress class="progress is-large is-success" value="5" max="5"></progress>
+          </div>
+          <div>
+            <p class="has-text-weight-bold">Attribute</p> 
+            <progress class="progress is-large is-success" value="1" max="5"></progress>
+          </div>
+          
           <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large is-success" value="4" max="5"></progress>
           <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large is-warning" value="3" max="5"></progress>
           <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large is-danger" value="2" max="5"></progress>
           <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large is-danger" value="1" max="5"></progress>
           <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large" value="0" max="5"></progress>
+          -->
         </div>
-        -->
+        
       </section>
     </div>
   </div>
 
-  
   <!--CDN link for jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <!--Example starter code for modal use, to be removed-->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -214,11 +218,7 @@
       }
     });
   });
-
-
-
   </script>
-
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
