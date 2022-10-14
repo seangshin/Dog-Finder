@@ -1,17 +1,16 @@
 var generateBtn = $("#generate");
 var randomDogPicEl = $("#randomDogPic");
-var breedEl = $("#breed");
+var breedDivEl = $("#breedDiv");
+//var breedEl = $("#breed");
 var dogBtn = $("#dog-APIninja");
 var dogAttrEl = $("#dog-attributes");
+var startEl = $("#start");
 
 var globalBreed = "";
+var myDogAttributes = [];
 
 //Function to display random image from Dog API
 function randomDogImage(dogAPIfetch) {
-  console.log("run random dog function!!!");//debug
-  console.log(dogAPIfetch.message);//debug
-  console.log(dogAPIfetch.message.split("/"));
-
   //appends randomly generated dog image to element hook randomDogPicEl
   randomDogPicEl.text("");//clear element hook
   var imgEl = $("<img>");
@@ -25,7 +24,12 @@ function randomDogImage(dogAPIfetch) {
   console.log(breed.replace("-", " "));//debug
   breed = breed.replace("-", " ");
   breed = breed.charAt(0).toUpperCase() + breed.slice(1);
-  breedEl.text("Breed: " + breed);
+
+  //append breed text to element hook breedDivEl
+  breedDivEl.text("");
+  var h2El = $("<h2>");
+  h2El.text("Breed: " + breed);
+  breedDivEl.append(h2El);
 
   //temporary
   globalBreed = breed;
@@ -97,15 +101,20 @@ dogBtn.on("click", adoptadogButtonHandler);
 $('.modal-card-body').on('click','.checkbox', function(event){
   var checkboxValues = 12; 
 
- for (var i = 0; i < checkboxValues; i++) {
-  if($(event.target).attr('index') == i) {
-    if($(event.target).is(":checked")) {
-      $(event.target).attr("value" + i, "true");
-    } else {
-      $(event.target).attr("value" + i, "false");
+  for (var i = 0; i < checkboxValues; i++) {
+    if($(event.target).attr('index') == i) {
+      if($(event.target).is(":checked")) {
+        $(event.target).attr("value" + i, "true");
+      } else {
+        $(event.target).attr("value" + i, "false");
+      }
     }
   }
-      
-  
- }
 });
+
+$(".modal-card-foot").on("click", ".button", function(event) {
+  if($(event.target).attr('id') == "searchBtn") {
+    startEl.hide();
+    generateButtonHandler();
+  }
+})

@@ -10,15 +10,50 @@
 </head>
 
 <body>
-  <header class="hero is-primary has-text-centered">
-    <h1 class="title is-size-1 m-5">Paw Finder</h1>
+  <header class="hero is-primary">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item is-size-3 has-text-weight-bold" href=""><!--**add deployed application link-->
+              <span>Paw Finder</span>
+            </a>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active">
+                Home
+              </a>
+              <a class="navbar-item">
+                History
+              </a>
+              <a class="navbar-item">
+                Documentation
+              </a>
+              <span class="navbar-item">
+                <a class="button is-primary is-inverted" href="https://github.com/seangshin/paw-finder"> 
+                  <span>GitHub</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
-
-  <div class="container has-text-centered">
-    <h1 class="title is-2">Welcome to Tinder meets dogs, click the start button to find your dog!</h1>
-    <!--Modal Button-->
-    <button class="js-modal-trigger button is-primary" data-target="search-modal">Start</button>
+  
+  <!--Start Section-->
+  <div class="hero is-fullheight" id="start">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <div class="box">
+          <h1 class="title is-2">Welcome to Tinder meets dogs, click the start button to find your dog!</h1>
+          <!--Modal Button-->
+          <button class="js-modal-trigger button is-primary" data-target="search-modal">Start</button>
+        </div>
       </div>
+    </div> 
+  </div>
 
   <!--Modal Element--> 
   <div class="modal" id="search-modal">
@@ -85,14 +120,14 @@
     </div>
   </div>
 
-  <!---------------------------->
+  <!--Hook for dog picture and breed-->
   <div class="container has-text-centered m-5">
-    <div id="randomDogPic">
-      <img class="m-5" src="./assets/images/shiba-inu.JPG">
-    </div>
+    <div id="randomDogPic"></div>
 
-    <h2 id="breed">Breed: Shiba Inu</h2>
-      <!-- buttons -->
+    <div id="breedDiv"></div>
+
+    
+      <!--
       <br>
       <div class="columns">
         <div class="column"></div>
@@ -105,7 +140,7 @@
         <div class="column"></div>
       </div>
   </div>
-  <!---------------------------->
+  -->
   
  
 
