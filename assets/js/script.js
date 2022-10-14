@@ -6,6 +6,7 @@ var startEl = $("#start");
 var nextBtnEl = $("#nextBtn");
 var saveBtnEl = $("#saveBtn");
 var buttonsEl = $("#buttons");
+var searchEl = $("#search");
 
 //Global Variables
 var globalBreed = "";
@@ -15,6 +16,7 @@ var myDogAttributes = [];
 //Function to initialize the browser
 function init() {
   buttonsEl.hide();
+  searchEl.hide();
   //reset user input for dog attributes
   for(var i=0; i<checkboxValues; i++) {
     myDogAttributes[i]=false;
@@ -144,6 +146,7 @@ $(".modal-card-foot").on("click", ".button", function(event) {
   if($(event.target).attr('id') == "searchBtn") {
     //store user checkbox input to array
     startEl.hide();
+    searchEl.show();
     buttonsEl.show();
     searchDogAPI();
   }
