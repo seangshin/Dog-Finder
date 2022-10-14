@@ -92,3 +92,43 @@ function adoptadogButtonHandler() {
 //Event handlers
 generateBtn.on("click", generateButtonHandler);
 dogBtn.on("click", adoptadogButtonHandler);
+
+
+//Get values from checkbox input 
+
+  //$('#checkbox-value').text($('#goodwithchildren').val());
+/*
+  $("#goodwithchildren").on('change', function() {
+    
+    if ($(this).is(':checked')) {
+      $(this).attr('value', 'true');
+        var goodWithChildrenTrue = true
+
+    } else {
+      $(this).attr('value', 'false');
+
+    }
+    
+    $( "body" ).click(function( event ) {
+        $( "#log" ).html( "clicked: " + event.target.nodeName );
+      });
+
+    }); 
+  */ 
+
+
+    $('.modal-card-body').on('click','.checkbox', function(event){
+        var checkboxValues = 12; 
+       
+       for (var i = 0; i < checkboxValues; i++){
+        if($(event.target).attr('index') == i) {
+            if ($(this).is(':checked')) {
+            $(this).attr('value' + indexof.$(this), 'true');
+               // var goodWithChildrenTrue = true
+      
+              } else {
+            $(this).attr('value' + i, 'false');
+          }
+        
+       }
+    });
