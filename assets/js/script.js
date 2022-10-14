@@ -14,7 +14,6 @@ function randomDogImage(dogAPIfetch) {
   //appends randomly generated dog image to element hook randomDogPicEl
   randomDogPicEl.text("");//clear element hook
   var imgEl = $("<img>");
-  imgEl.addClass("m-5");
   imgEl.attr("value", "dog-image").attr("src", dogAPIfetch.message);
   randomDogPicEl.append(imgEl);
 
