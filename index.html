@@ -30,51 +30,51 @@
       </header>
       <section class="modal-card-body white-bis">
         <div>
-          <input type="checkbox" class="checkbox" value="children" id="goodwithchildren">
+          <input type="checkbox" class="checkbox" value="false" index ="0" id="goodwithchildren">
           <label for="children"> Good with children</label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="otherdogs" id="goodwithotherdogs">
+          <input type="checkbox" class="checkbox" value="false" index ="1" id="goodwithotherdogs">
           <label for="otherdogs"> Good with other dogs </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="hair" id="shedding">
+          <input type="checkbox" class="checkbox" value="false" index ="2" id="shedding">
           <label for="hair"> Shedding </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="maintenance" id="grooming">
+          <input type="checkbox" class="checkbox" value="false" index ="3" id="grooming">
           <label for="maintenance"> Grooming </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="slobber" id="drooling">
+          <input type="checkbox" class="checkbox" value="false" index ="4" id="drooling">
           <label for="slobber"> Drooling </label>
         </div> 
         <div>
-          <input type="checkbox" class="checkbox" value="fur" id="coatlength">
+          <input type="checkbox" class="checkbox" value="false" index ="5" id="coatlength">
           <label for="fur"> Coat Length </label>
         </div>
         <div>
-          <input type="checkbox" class="strangers" value="fur" id="goodwithstrangers">
+          <input type="checkbox" class="checkbox" value="false" index ="6" id="goodwithstrangers">
           <label for="strangers"> Good with Strangers </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="spirited" id="playfulness">
+          <input type="checkbox" class="checkbox" value="false" index ="7" id="playfulness">
           <label for="spirited"> Playfulness </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="defense" id="protectiveness">
+          <input type="checkbox" class="checkbox" value="false" index ="8" id="protectiveness">
           <label for="defense"> Protectiveness  </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="adaptable" id="trainability">
+          <input type="checkbox" class="checkbox" value="false" index ="9" id="trainability">
           <label for="adaptable"> Trainability </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="passion" id="energy">
+          <input type="checkbox" class="checkbox" value="false" index ="10" id="energy">
           <label for="passion"> Energy </label>
         </div>
         <div>
-          <input type="checkbox" class="checkbox" value="woof" id="barking">
+          <input type="checkbox" class="checkbox" value="false" index ="11" id="barking">
           <label for="woof"> Barking </label>
         </div>
       </section>
@@ -129,8 +129,7 @@
 
 <!-- Progress Bars -->
   <!-- Need to find a way to enter data from API into Attribute and value section and manipulate color based on the value -->
-  <section class="section" id="dog-attributes">
-    <!--temporary
+  <section class="section">
     <div class="box">
       <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large is-success" value="5" max="5"></progress>
       <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large is-success" value="4" max="5"></progress>
@@ -139,9 +138,8 @@
       <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large is-danger" value="1" max="5"></progress>
       <p class="has-text-weight-bold">Attribute</p> <progress class="progress is-large" value="0" max="5"></progress>
     </div>
-    -->
   </section>
-
+  
   <!--CDN link for jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -190,7 +188,11 @@
         closeAllModals();
       }
     });
-  });</script>
+  });
+
+
+
+  </script>
 
   <script src="./assets/js/script.js"></script>
 </body>
