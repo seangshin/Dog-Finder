@@ -93,42 +93,19 @@ function adoptadogButtonHandler() {
 generateBtn.on("click", generateButtonHandler);
 dogBtn.on("click", adoptadogButtonHandler);
 
+//Event listener for checkboxes
+$('.modal-card-body').on('click','.checkbox', function(event){
+  var checkboxValues = 12; 
 
-//Get values from checkbox input 
-
-  //$('#checkbox-value').text($('#goodwithchildren').val());
-/*
-  $("#goodwithchildren").on('change', function() {
-    
-    if ($(this).is(':checked')) {
-      $(this).attr('value', 'true');
-        var goodWithChildrenTrue = true
-
+ for (var i = 0; i < checkboxValues; i++) {
+  if($(event.target).attr('index') == i) {
+    if($(event.target).is(":checked")) {
+      $(event.target).attr("value" + i, "true");
     } else {
-      $(this).attr('value', 'false');
-
+      $(event.target).attr("value" + i, "false");
     }
-    
-    $( "body" ).click(function( event ) {
-        $( "#log" ).html( "clicked: " + event.target.nodeName );
-      });
-
-    }); 
-  */ 
-
-
-    $('.modal-card-body').on('click','.checkbox', function(event){
-        var checkboxValues = 12; 
-       
-       for (var i = 0; i < checkboxValues; i++){
-        if($(event.target).attr('index') == i) {
-            if ($(this).is(':checked')) {
-            $(this).attr('value' + indexof.$(this), 'true');
-               // var goodWithChildrenTrue = true
+  }
       
-              } else {
-            $(this).attr('value' + i, 'false');
-          }
-        
-       }
-    });
+  
+ }
+});
