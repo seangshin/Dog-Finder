@@ -12,9 +12,15 @@ var searchEl = $("#search");
 var globalBreed = "";
 var checkboxValues = 12; 
 var myDogAttributes = [];
+var dogNames = [];
 
 //Function to initialize the browser
 function init() {
+  dogNames = JSON.parse(localStorage.getItem("savedDogs"));
+  if(dogNames==null) {
+    dogNames = [];
+  }
+
   buttonsEl.hide();
   searchEl.hide();
   //reset user input for dog attributes
@@ -127,6 +133,12 @@ function searchAPIninjas() {
     }
   })
 };
+//Function to save
+function save() {
+  dogNames.push(globalBreed);
+  localStorage.setItem("savedDogs", JSON.stringify(dogNames));
+}
+
 //Event listener for checkboxes
 $('.modal-card-body').on('click','.checkbox', function(event){
   for (var i = 0; i < checkboxValues; i++) {
@@ -155,3 +167,5 @@ $(".modal-card-foot").on("click", ".button", function(event) {
 nextBtnEl.on("click", function(){
   searchDogAPI();
 });
+//Event listener for save button
+saveBtnEl.on("click", save);
