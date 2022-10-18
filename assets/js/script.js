@@ -13,6 +13,7 @@ var globalBreed = "";
 var checkboxValues = 12; 
 var myDogAttributes = [];
 var dogNames = [];
+var swap = false;
 
 //Function to initialize the browser
 function init() {
@@ -122,10 +123,19 @@ function searchAPIninjas() {
       //fetch data now available (add functions)
         console.log(data);//debug to show fetch return
         if(data.length!=0) {
+          swap = false;
           addDogAttributes(data);
         } else {
-          console.log("No result found!");
-          dogAttrEl.text("");
+          var check = globalBreed.split(" ");
+          if(check.length > 1 && swap == false) {//checks if the breed name is more than one word, if so then search different combinations
+            swap = true;
+            globalBreed = globalBreed.split(" ").reverse().join(" ");
+            searchAPIninjas();
+          } else {
+            swap = false;
+            dogAttrEl.text("");
+            dogAttrEl.text("No result found!");
+          }
         }
       })
     } else {
@@ -138,7 +148,6 @@ function save() {
   dogNames.push(globalBreed);
   localStorage.setItem("savedDogs", JSON.stringify(dogNames));
 }
-
 //Event listener for checkboxes
 $('.modal-card-body').on('click','.checkbox', function(event){
   for (var i = 0; i < checkboxValues; i++) {
