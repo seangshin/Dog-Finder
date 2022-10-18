@@ -7,6 +7,8 @@ var nextBtnEl = $("#nextBtn");
 var saveBtnEl = $("#saveBtn");
 var buttonsEl = $("#buttons");
 var searchEl = $("#search");
+var burgerEl = $("#burger");
+var navbarEl = $("#navbarMenuHeroA");
 
 //Global Variables
 var globalBreed = "";
@@ -178,3 +180,17 @@ nextBtnEl.on("click", function(){
 });
 //Event listener for save button
 saveBtnEl.on("click", save);
+//Event listener for burger icon
+burgerEl.on("click", function() {
+  for(var i=0; i<navbarEl[0].classList.length; i++) {
+    if(navbarEl[0].classList[i]=="is-active") {
+      var active = true;
+      navbarEl.removeClass("is-active");
+    }
+  }
+  if(active==true) {
+    navbarEl.removeClass("is-active");
+  } else {
+    navbarEl.addClass("is-active");
+  }
+});
