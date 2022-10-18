@@ -1,4 +1,6 @@
 var savedDogEl = $("#savedDog");
+var burgerEl = $("#burger");
+var navbarEl = $("#navbarMenuHeroA");
 
 var dogNames = [];
 //Function to initialize the page which gets data from local storage and dynamically updates the HTML
@@ -36,3 +38,18 @@ function init() {
     */
   }
 } init();
+
+//Event listener for burger icon
+burgerEl.on("click", function() {
+  for(var i=0; i<navbarEl[0].classList.length; i++) {
+    if(navbarEl[0].classList[i]=="is-active") {
+      var active = true;
+      navbarEl.removeClass("is-active");
+    }
+  }
+  if(active==true) {
+    navbarEl.removeClass("is-active");
+  } else {
+    navbarEl.addClass("is-active");
+  }
+});
