@@ -1,7 +1,7 @@
 # dog-finder
 
 ![](assets/screenshot.JPG)
-Link to Website: https://seangshin.github.io/dog-finder/
+Link to Website: https://seangshin.github.io/Dog-Finder/
 
 ## Description
 The motivation of this project is to build an interactive front-end application that allows users to find a dog that is compatible for them. The application implements server-side API's to retrieve data to be used in the context of our application. It features dynamically updated HTML and CSS powered by jQuery. This activity also reinforces concepts such as third party APIs, local storage, and JSON formatting.
